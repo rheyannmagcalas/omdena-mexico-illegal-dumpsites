@@ -55,8 +55,7 @@ elif add_selectbox == 'Dataset':
     st.subheader('Dataset')
 
     st.image('trashout.PNG')
-    st.image('dumpsites.PNG')
-    # st.image('wikipedia.PNG')
+    
 
 elif add_selectbox == 'EDA':
     st.subheader('Exploratory Data Analysis')

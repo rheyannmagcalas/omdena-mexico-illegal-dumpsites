@@ -44,30 +44,46 @@ if add_selectbox == 'About':
             of nature that must be protected', unsafe_allow_html=True)
     st.markdown('<h4>The Problem</h4>', unsafe_allow_html=True)
 
-    st.markdown('<h4>Locations Reported as Illegal Dumpsites</h4>', unsafe_allow_html=True)
+    
     st.markdown('Build machine learning models on illegal dumping(s)in Mexico to see if there are any patterns to help understand what \
         causes illegal dumping(s), predict potential dumpsites, and eventually how to avoid them.', 
         unsafe_allow_html=True)
 
+    st.markdown('<h4>Locations Reported as Illegal Dumpsites</h4>', unsafe_allow_html=True)
+
+    st.image('map.PNG')
     components.html(heatmap_html, height= 500, width=900)
 
 elif add_selectbox == 'Dataset':
     st.subheader('Dataset')
 
     st.image('trashout.PNG')
-    st.image('open_street_map.PNG')
+    st.image('osmnx.PNG')
     st.image('wikipedia.PNG')
 
 elif add_selectbox == 'EDA':
     st.subheader('Exploratory Data Analysis')
 
+    eda = st.selectbox(
+     'Select Model',
+     ('Trash Details','Location', 'Waste Management', 'Population'))
+
+    if eda == 'Trash Details':
+        st.image('type_of_trash.PNG')
+        st.image('size_of_trash.PNG')
+    elif eda == 'Location':
+        st.image('top_states.PNG')
+        st.image('top_cities.PNG')
+    elif eda == 'Waste Management':
+        st.image('waste_management.PNG')
+    elif eda == 'Population':
+        st.image('population.PNG')
+        st.image('area.PNG')
+        st.image('density.PNG')
+
+
 elif add_selectbox == 'Modelling':
     st.subheader('Modelling')
-
-    # london_location = [35.0183,137.2924]
-
-    # m = folium.Map(location=london_location, zoom_start=15)
-    # folium_static(m, width=900)
 
     modeling_option = st.selectbox(
      'Select Model',

@@ -32,9 +32,6 @@ add_selectbox = st.sidebar.radio(
     ("About", "Dataset", "EDA", "Modelling", "Collaborators")
 )
 
-HtmlFile = open("dump_site_1.html", 'r', encoding='utf-8')
-heatmap_html = HtmlFile.read() 
-
 if add_selectbox == 'About':
     st.subheader('ABOUT THE PROJECT')
 
@@ -51,14 +48,14 @@ if add_selectbox == 'About':
 
     st.markdown('<h4>Locations Reported as Illegal Dumpsites</h4>', unsafe_allow_html=True)
 
-    st.image('map.PNG')
-    components.html(heatmap_html, height= 500, width=900)
+    #st.image('dumpsitemap.PNG')
+
 
 elif add_selectbox == 'Dataset':
     st.subheader('Dataset')
 
     st.image('trashout.PNG')
-    st.image('dumpsites.PNG')
+    # st.image('dumpsites.PNG')
     st.image('wikipedia.PNG')
 
 elif add_selectbox == 'EDA':

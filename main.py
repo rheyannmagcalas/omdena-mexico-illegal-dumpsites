@@ -46,7 +46,7 @@ if add_selectbox == 'About':
         causes illegal dumping(s), predict potential dumpsites, and eventually how to avoid them.', 
         unsafe_allow_html=True)
 
-    st.markdown('<h4>Locations Reported as Illegal Dumpsites</h4>', unsafe_allow_html=True)
+    # st.markdown('<h4>Locations Reported as Illegal Dumpsites</h4>', unsafe_allow_html=True)
 
     #st.image('dumpsitemap.PNG')
 
@@ -55,8 +55,8 @@ elif add_selectbox == 'Dataset':
     st.subheader('Dataset')
 
     st.image('trashout.PNG')
-    # st.image('dumpsites.PNG')
-    st.image('wikipedia.PNG')
+    st.image('dumpsites.PNG')
+    # st.image('wikipedia.PNG')
 
 elif add_selectbox == 'EDA':
     st.subheader('Exploratory Data Analysis')
